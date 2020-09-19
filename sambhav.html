@@ -1,0 +1,380 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+        <meta nmae="viewport" content="widh=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+    <style>
+      body{
+        background-color: aliceblue;
+      }
+      .head-container {
+        height: 60px;
+        width: 100%;
+        background-color: #667eea;
+        position: relative;
+      }
+      .search-box {
+        width: 500px;
+        height: 30px;
+        margin-left: 300px;
+        margin-top: 17px;
+        outline: none;
+        border: none;
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,.16);
+      }
+      .search-btn{
+        height: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color:  #667eea;
+        background-color: #fff;
+        box-shadow: 0 5px 0px 0 rgba(0,0,0,.12);
+      }
+      #login-btn{
+        width: 100px;
+        height: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-left: 50px;
+        color: #667eea;
+        background-color: #fff;
+        font-weight: bold;
+      }
+      .head-container a {
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-left:  80px;
+        text-decoration-line: none;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+       .cart-btn{
+        margin-left: 70px;
+        height: 30px;
+        width:70px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      slide{
+        position:absolute;
+        padding: 55px 0px;
+        width: 99%;
+      }
+      .dodbtn{
+        margin-left:985px;
+        background-color:#2874f0;
+        border:none;
+        height: 35px;
+        width: 150px;
+        color:#fff;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        font-weight: 500;
+      }
+      .phonecontain{
+        background-color: #fff;
+        width: 100%;
+        height: 95px;
+        overflow: hidden;
+        position: relative;
+        font-family:Roboto, Arial, sans-serif;
+        font-size: 30px;
+        margin-top: 10px;
+      }
+      .BBBPbtn {
+        float:right;
+        margin-right:50px;
+        padding: 8px;
+        width: 105px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        background-color: #2874f0;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        color:#fff;
+      }
+      .prev{
+        font-weight: bold;
+      }
+      .next{
+        font-weight: bold;
+      }
+      .nav-bar{ 
+        background-color:white;
+        position: absolute;
+        width:98.8%
+      }
+      .nav_content{
+        display: flex;
+        list-style: none;
+        padding: 3px;
+      }
+      .nav_content_item{
+        margin-left: 55px;
+        text-decoration: none;
+      }
+      .nav_content_item a{
+        color: black;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+      }
+      .nav_submenu{
+        list-style: none;
+        padding: 0px;
+      }
+      .nav_submenu li{
+        margin-bottom: 1em;
+        margin-top: 1em;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        margin-left: 5px;
+      }
+
+      .nav_menu{
+        background-color: white;
+        width:90%;
+        height: 560px;
+        position: absolute;
+        margin-top: 15px;
+        display:none;
+        box-shadow: 0px 5px 5px grey;
+        z-index: 1;
+      }
+      .nav_menu_col1{
+        background-color:lightseagreen;
+        width: 20%;
+        height: 559px;
+        position: absolute;
+        cursor: pointer;
+      }
+      .nav_menu_col2{
+        background-color:lightslategray;
+        width:20%;
+        height: 559px;
+        position: absolute;
+        margin-left: 240px;
+        cursor: pointer;
+      }
+      .nav_menu_col3{
+        background-color:lightseagreen;
+        width:20%;
+        height: 559px;
+        position: absolute;
+        margin-left: 478px;
+        cursor: pointer;
+      }
+      
+      .nav_menu_col4{
+        background-color:lightslategray;
+        width:20%;
+        height: 559px;
+        position: absolute;
+        margin-left: 718px;
+        cursor: pointer;
+      }
+      .nav_menu_col5{
+        background-color:lightseagreen;
+        width:20.2%;
+        height: 559px;
+        position: absolute;
+        margin-left: 958px;
+        cursor: pointer;
+      }
+      .nav_con_btn{
+        background-color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .nav_content > .nav_con_item:hover .nav_menu > .nav_submenu{display:block;}
+    </style>
+    <body>
+    <div class="head-Container">
+        <input type="text" class="search-box" placeholder="search for products, brands & more" button type="button" class="search-btn"><button type="button" class="search-btn"><i class="fa fa-search"></i></button>
+        <button type="button" id="Login-btn" value="Login">Login</button>
+        <a href="more">More</a>
+        <button type="btn" class="cart-btn" style="background-color:#667eea; color:#fff;"><i class="fa fa-shopping-cart" style="font-size:20px;">&nbsp<b>Cart</b></i></button>
+    </div>
+    <div class="nav-bar">
+      <ul class="nav_content">
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Electronics">Electronics</a></button>
+          <div class="nav_menu">
+            <div class="nav_menu_col1">
+          <ul class="nav_submenu">
+            <strong><li style="font-size: 17px;">Mobile</li></strong> 
+            <li><a href="#">ASUS</a></li>
+            <li><a href="#">OPPO</a></li>
+            <li><a href="#">VIVO</a></li>
+            <li><a href="#">SAMSUNG</a></li>
+            <li><a href="#">MI</a></li>
+            <li><a href="#">Infinix</a></li>
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Honor</a></li>
+            <li><a href="#">Poco X2</a></li>
+            <li><a href="#">realmeNarzo 10</a></li>
+            <li><a href="#">infinix Hot 9</a></li>
+            <li><a href="#">IQOO 3</a></li>
+            <li><a href="#">iPhone SE</a></li>
+            <li><a href="#">Motorola razr</a></li>
+            <li><a href="#">realme Narzo 10A</a></li>
+            <li><a href="#">Motorola g8 power lite</a></li>
+          </ul>
+          </div>
+          <div class="nav_menu_col2">
+            <ul class="nav_submenu">
+              <strong><li  style="font-size: 17px;">Mobile</li></strong>
+              <li><a href="#">ASUS</a></li>
+              <li><a href="#">OPPO</a></li>
+              <li><a href="#">VIVO</a></li>
+              <li><a href="#">SAMSUNG</a></li>
+              <li><a href="#">MI</a></li>
+              <li><a href="#">Infinix</a></li>
+            </ul>
+            </div>
+            <div class="nav_menu_col3">
+              <ul class="nav_submenu">
+                <strong><li  style="font-size: 17px;">Mobile</li></strong>
+                <li><a href="#">ASUS</a></li>
+                <li><a href="#">OPPO</a></li>
+                <li><a href="#">VIVO</a></li>
+                <li><a href="#">SAMSUNG</a></li>
+                <li><a href="#">MI</a></li>
+                <li><a href="#">Infinix</a></li>
+              </ul>
+              </div>
+              <div class="nav_menu_col4">
+                <ul class="nav_submenu">
+                  <strong><li  style="font-size: 17px;">Mobile</li></strong>
+                  <li><a href="#">ASUS</a></li>
+                  <li><a href="#">OPPO</a></li>
+                  <li><a href="#">VIVO</a></li>
+                  <li><a href="#">SAMSUNG</a></li>
+                  <li><a href="#">MI</a></li>
+                  <li><a href="#">Infinix</a></li>
+                </ul>
+                </div>
+                <div class="nav_menu_col5">
+                  <ul class="nav_submenu">
+                    <strong><li  style="font-size: 17px;">Mobile</li></strong>
+                    <li><a href="#">ASUS</a></li>
+                    <li><a href="#">OPPO</a></li>
+                    <li><a href="#">VIVO</a></li>
+                    <li><a href="#">SAMSUNG</a></li>
+                    <li><a href="#">MI</a></li>
+                    <li><a href="#">Infinix</a></li>
+                  </ul>
+                  </div>
+        </div>
+        </li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="TVs & Appliances">TVs & Appliances</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Men">Men</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Women">Women</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Baby & Kids">Baby & Kids</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Home & Furniture">Home & Furniture</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Sports, Books & More">Sports, Books & More</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Flights">Flights</a></button></li>
+        <li class="nav_content_item"><button class="nav_con_btn"><a href="Offer Zone">Offer Zone</a></button></li>
+      </ul>
+    </div>
+
+<slide>
+  <div class="slidebar">
+    <img src="mike-petrucci-c9FQyqIECds.jpg" id="slider" style="width:100%; height:250px;">
+    <!--<img src="malvestida-magazine-u79wy47kvVs.jpg" style="width:100%; height:250px;">-->
+  </div>
+</slide>
+<table style="position:relative; background-color:azure; width:100%; height:fit-content; margin-top:310px; padding:13px; box-shadow: 0 0px 3px grey;">
+  <tr>
+    <td style="color:black; font-family:Arial, Helvetica, sans-serif; font-size:22px;">Deals of the Day<button type="btn" class="dodbtn" value="VIEW ALL">VIEW ALL</button></td>
+  </tr>
+</table>
+<table style="width:100%; background-color:#fff; height:fit-content;">
+  <tr>
+    <td><a class="prev" onclick="plusSlides(-1)">&#10094;</a></td>
+    <td><img src="adidas-neo-2.jpg" style="height:200px; width:200px;"><br></td>
+    <td><img src="71qvgAe9UVL._SY355_.jpg" style="height:200px; width:200px;"></td>
+    <td><img src="kffv6f4v6fmkf.jpg" style="height:200px; width:200px;"></td>
+    <td><img src="5137YT6+9iL.jpg" style="height:200px; width:200px;"></td>
+    <td><img src="card-usb-1_6.jpg" style="height:200px; width:200px;"></td>
+    <td><a class="next" onclick="plusSlides(1)">&#10095;</a></td>
+  </tr>
+  <table style="background-color:#fff; width:100%;">
+  <tr>
+    <td><p style="font-family:Roboto, Arial, sans-serif; margin-left:40px; color: rgb(33, 33, 33); font-size:14px; font-weight:bold; letter-spacing:normal;">Shoes & Sandals<br><p style="margin-left:50px; color: #388e3c; font-size:14px;">Up to 40% off<p style="margin-left:10px; opacity: .6; font-family:Roboto, Arial, sans-serif; display:block;  font-size:14px; letter-spacing: normal;">adidas, Woodland & more</p></p></td>
+    <td><p style="font-family:Roboto, Arial, sans-serif; margin-left:145px; color: rgb(33, 33, 33); font-size:14px; font-weight:bold; letter-spacing:normal;">Headphones<br><p style="margin-left:145px; color: #388e3c; font-size:14px;">Up to 50% off<p style="margin-left:125px; opacity: .6; font-family:Roboto, Arial, sans-serif; display:block;  font-size:14px; letter-spacing: normal;">JBL, Sony & more</p></p></td>
+    <td><p style="font-family:Roboto, Arial, sans-serif; margin-left:155px; color: rgb(33, 33, 33); font-size:14px; font-weight:bold; letter-spacing:normal;">Home Speaker<br><p style="margin-left:160px; color: #388e3c; font-size:14px;">Up to 35% off<p style="margin-left:125px; opacity: .6; font-family:Roboto, Arial, sans-serif; display:block;  font-size:14px; letter-spacing: normal;">JBL,Sony,Promax & more</p></p></td>
+    <td><p style="font-family:Roboto, Arial, sans-serif; margin-left:88px; color: rgb(33, 33, 33); font-size:14px; font-weight:bold; letter-spacing:normal;">Power & Home Toolkit<br><p style="margin-left:120px; color: #388e3c; font-size:14px;">Up to 30% off<p style="margin-left:80px; opacity: .6; font-family:Roboto, Arial, sans-serif; display:block;  font-size:14px; letter-spacing: normal;">All tools with good feedback</p></p></td>
+    <td><p style="font-family:Roboto, Arial, sans-serif; margin-left:110px; color: rgb(33, 33, 33); font-size:14px; font-weight:bold; letter-spacing:normal;">Pendrive & Cardreader<br><p style="margin-left:150px; color: #388e3c; font-size:14px;">Up to 26% off<p style="margin-left:110px; opacity: .6; font-family:Roboto, Arial, sans-serif; display:block;  font-size:14px; letter-spacing: normal;">Sandisk,SAMSUNG & more</p></p></td>
+    </tr>
+</table>
+</table>
+<table style="margin-top:10px; padding:5px;">
+  <tr>
+    <td><img style="height:200.703px; width:439px; cursor: pointer;" src="sale_footwear.jpg"></td>
+    <td><img style="height:200.703px; width:439px; cursor: pointer;" src="481577cb288776a5e3b2121a5697a322.jpg"></td>
+    <td><img style="height:200.703px; width:439px; cursor: pointer;" src="3.24_LG_warranty.jpg"></td>
+  </tr>
+</table>
+<div class="phonecontain"><p style="margin-left:30px; font-weight: bold;">Best Battery Backup Phones<button type="button" class="BBBPbtn" value="VIEW ALL">VIEW ALL</button></p></div>
+<table style="background-color:#fff; width:100%;">
+  <tr>
+    <td><a class="prev" onclick="plusSlides(-1)">&#10094;</a></td>
+    <td><img src="realmenarzo10_vs_realme6_compared_1589208230989.jpg" style="height:200px; margin-left:20px;"></td>
+      <td><img src="16272-4-1.jpg" style="height:200px; margin-left:90px;"></td>
+       <td><img src="Samsung-Galaxy-A31-696x464.jpg" style="height:200px; margin-left:90px;"></td>
+          <td><img src="138185-v6-infinix-hot-9-mobile-phone-large-1.jpg" style="height:200px; margin-left:90px;"></td>
+            <td><img src="asus-zenfone-max-pro-m2-front.jpg" style="height:200px; margin-left:90px;"></td>
+              <td><img src="137471-v8-motorola-edge-plus-mobile-phone-large-1.jpg" style="height:200px; margin-left:90px;"></td>
+                <td><img src="138377-v4-xiaomi-poco-m2-pro-mobile-phone-large-1.jpg" style="height:200px; margin-left:70px;"></td>
+                  <td><a class="next" onclick="plusSlides(1)">&#10095;</a></td>
+  </tr>
+  <table style="background-color: #fff; width:100%;">
+    <tr>
+      <td class="phonerw"><h5 style="margin-left:20px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">Realme Narzo 10A</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left:15px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:25px; opacity: .6;">Now ₹8999</p></p></td>
+      <td class="phonerw"><h5 style="margin-left:95px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">Realme 6i</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left:70px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:80px; opacity: .6;">Now ₹ 8999</p></p></td>
+      <td class="phonerw"><h5 style="margin-left:70px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">SAMSUNG Galaxy A31</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left: 85px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:100px; opacity: .6;">Now ₹20,999</p></p></td>
+      <td class="phonerw"><h5 style="margin-left:95px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">infinix hot 9</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left: 70px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:90px; opacity: .6;">Now ₹ 8999</p></p></td>
+      <td class="phonerw"><h5 style="margin-left:100px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">ASUS maxpro m2</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left: 100px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:105px; opacity: .6;">Now ₹13,999</p></p></td>
+      <td class="phonerw"><h5 style="margin-left:90px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">motorola edge +</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left: 80px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:95px; opacity: .6;">Now ₹74,999</p></p></td>
+      <td class="phonerw"><h5 style="margin-left:65px; font-family:Roboto, Arial, sans-serif; margin-bottom:5px;">poco m2 pro</h5><p style="font-family:Roboto, Arial, sans-serif; color: #388e3c; font-size:14px; font-weight:2px; margin-left: 53px; margin-bottom: -5px;">5000 mAh battery<br><p style="font-family:Roboto, Arial, sans-serif; margin-left:60px; opacity: .6;">Now ₹13,999</p></p></td>
+    </tr>
+  </table>
+</table>
+<div class="phonecontain"><p style="margin-left:30px; font-weight:bold;">Home Decoration & Furniture<button type="button" class="BBBPbtn" value="VIEW ALL">VIEW ALL</button></p></div>
+<table style="width:100%; background-color:#fff;">
+  <tr>
+    <td><div class="furnitureslideshow"><a class="next" onclick="plusSlides(1)">&#10094; </a></div></td>
+    <td><img src="Lepidium-sofa.jpg" style="height:200; width:420; margin-left:8px;"></td>
+    <td><img src="1setsofa.jpg" style="height:200; width:420;"></td>
+    <td><img src="bed1.jpg" style="height:200; width:420;"></td>
+    <td><a class="next" onclick="plusSlides(1)">&#10095;</a></td>
+    <!--<td><img src="unnamed.jpg" style="height:200; width:400;"></td>-->
+  </tr>
+</table>
+<div class="phonecontain"><p style="margin-left:30px; font-weight:bold;">Top picks on mens & woman clothing<button type="button" class="BBBPbtn" value="VIEW ALL">VIEW ALL</button></p></div>
+  <script>
+    function first() {
+      document.getElementById("slider").src="mike-petrucci-c9FQyqIECds.jpg";
+    }
+    function second()  {
+      document.getElementById("slider").src="malvestida-magazine-u79wy47kvVs.jpg";
+    }
+    function third()  {
+      document.getElementById("slider").src="picture1.jpg";
+    }
+    function fourth()  {
+      document.getElementById("slider").src="picture2.jpg";
+    }
+    setInterval(first,2000);
+    setInterval(second,4000);
+    setInterval(third,6000);
+    setInterval(third,6000);
+    </script>
+    </body>
+</html>
